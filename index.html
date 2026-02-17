@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Salaheddine Chikhi - Data Scientist Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu">
+                <a href="#" class="logo">Salaheddine Chikhi</a>
+                        
+                <!--mobile menu-->
+                <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </label>
+
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li class="talking"><a href="#contact">Let's talk</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <video autoplay loop muted playsinline class="hero-video">
+
+                 <source src="loop.mp4" type="video/mp4">
+                <img src="fallback-image.jpg" alt="Data Science Visualization">
+            </video>
+                <div class="container">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <p>Available for hire</p>
+                    </div>
+                    <h1>Salaheddine<br> <span>Chikhi</span></h1>
+                    <p>Data Scientist | Turning Raw Data into <span>Business Strategy</span></p>
+                    <div class="skillset">
+                        <div class="skill">Python</div>
+                        <div class="skill">SQL</div>
+                        <div class="skill">ML</div>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="projects.html" class="btn">View Projects </a>
+                        <a href="Salaheddine_Chikhi_Resume.pdf" class="btn1">Download Resume</a>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-value">2+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">92%</span>
+                            <span class="stat-label">Accuracy rate</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </header>
+    <main>
+        <section class="about-me" id="about">
+            <h2>About Me</h2>
+            <p>I am a Data Science practitioner and second-year IT Development student at Hassan II University, combining a rigorous foundation in software engineering with advanced analytics. Certified by ALX Africa and currently advancing through the DataCamp Professional Scientist track, I approach data problems with an engineer's mindset.
+               <br><br>My background in low-level programming (C) and Linux architecture gives me a unique edge in understanding optimization and system performance, while my expertise in Python (Pandas, Scikit-Learn) and SQL allows me to build robust predictive models. Beyond the technical, I am a proactive collaborator; as a first-year student, I successfully led the interface development for a digital platform, demonstrating my ability to drive projects and foster positive team dynamics. I don't just analyze data; I build the logic that makes it valuable.
+            </p>
+                     
+        </section>
+
+         <section class="contact" id="contact">
+            <h2>Let's Connect</h2>
+            <p class="contact-subtitle">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+
+            <form class="contact-form" action="https://formsubmit.co/chikhisalaheddine60@email.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="#">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn contact-btn">Send Message</button>
+            </form>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/salaheddine-chikhi/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/IP-Yuri" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+                <a href="mailto:chikhisalaheddine60@email.com" aria-label="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    </main>
+        
+    <footer>
+        <p>&copy; 2024 Salaheddine Chikhi. All rights reserved.</p>
