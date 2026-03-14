@@ -395,29 +395,6 @@ body{
     margin-bottom: 0rem;
 }
 
-/*------------------------Projects Page-----------------------------*/
-.projects{
-    padding: 60px 20px;
-    background-color: #041924;
-    margin-top: 5rem;
-    margin-bottom: auto;
-}
-.projects h1{
-    text-align: center;
-    font-size: 3.5rem;
-    margin-top: 0rem;
-    margin-bottom: 30px;
-    color: rgb(50, 151, 173);
-}
-.projects p{
-    font-size: 22px;
-    max-width: 1000px;
-    margin: 0 auto;
-    line-height: 1.6;
-    color: #c4bfbf;
-    margin-bottom: 40px;
-}
-
 /*====================================================================
   RESPONSIVE — TABLET (≤1024px)
 ====================================================================*/
@@ -441,87 +418,73 @@ body{
 /*--------------------------Contact Section-----------------------------*/
 .contact {
     background: #010808;
-background: linear-gradient(311deg, rgba(1, 8, 8, 1) 0%, rgba(0, 7, 8, 1) 34%, rgba(9, 58, 61, 1) 50%, rgba(2, 15, 15, 1) 66%, rgba(1, 10, 15, 1) 100%);
+    background: linear-gradient(311deg, rgb(0, 0, 0) 0%, rgba(0, 7, 8, 1) 34%, rgb(3, 23, 24) 50%, rgb(0, 14, 14) 66%, rgba(1, 10, 15, 1) 100%);
     padding: 80px 20px;
-    text-align: center;
 }
 
-.contact h2 {
-    font-size: 3.5rem;
-    margin-top: 0;
-    margin-bottom: 16px;
-    color: rgb(50, 151, 173);
-}
-
-.contact-subtitle {
-    font-size: 1.1rem;
-    color: #a0a0a0;
-    max-width: 500px;
-    margin: 0 auto 48px;
-    line-height: 1.6;
-}
-
-.contact-form {
-    max-width: 520px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    max-width: 80rem; /* 1280px */
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/* Left Column: Info */
+.contact-info {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.form-group label {
-    font-size: 0.85rem;
-    color: rgb(96, 197, 220);
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
+.contact-headings {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.contact-title-main {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
-.form-group input,
-.form-group textarea {
-    background: rgba(0, 195, 255, 0.05);
-    border: 1px solid rgba(0, 195, 255, 0.15);
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    color: #ffffff;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    resize: vertical;
+.contact-title-sub {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: rgb(50, 151, 173); /* Portfolio branding */
+    text-transform: uppercase;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+.contact-description {
+    font-size: 1.1rem;
+    color: #c4bfbf;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: rgb(50, 151, 173);
-    box-shadow: 0 0 12px rgba(0, 195, 255, 0.15);
-}
-
-.contact-btn {
-    align-self: center;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-/* Social Links */
+/* Original Social Links styling, but left-aligned */
 .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 24px;
-    margin-top: 48px;
+    margin-top: 2rem;
 }
 
 .social-links a {
@@ -530,10 +493,10 @@ background: linear-gradient(311deg, rgba(1, 8, 8, 1) 0%, rgba(0, 7, 8, 1) 34%, r
     justify-content: center;
     width: 48px;
     height: 48px;
-    border-radius: 50%;
-    background: rgba(0, 195, 255, 0.08);
+    border-radius: 10px; /* Modern rounded box instead of circle */
+    background: rgba(0, 195, 255, 0.08); /* Cyber cyan glass */
     border: 1px solid rgba(0, 195, 255, 0.15);
-    color: rgb(96, 197, 220);
+    color: rgb(50, 151, 173);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -544,6 +507,111 @@ background: linear-gradient(311deg, rgba(1, 8, 8, 1) 0%, rgba(0, 7, 8, 1) 34%, r
     color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 195, 255, 0.25);
     transform: translateY(-3px);
+}
+
+/* Right Column: Transmission Form */
+.transmission-card {
+    background: linear-gradient(145deg, rgba(4, 25, 36, 0.3) 0%, rgba(1, 10, 15, 0.8) 100%);
+    border: 1px solid rgba(0, 195, 255, 0.08);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 2.5rem;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.transmission-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.transmission-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.secure-badge {
+    background: rgba(0, 195, 255, 0.05); /* very subtle cyan */
+    border: 1px solid rgba(0, 195, 255, 0.1);
+    color: rgb(50, 151, 173);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.625rem;
+    font-family: 'Space Grotesk', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+}
+
+.terminal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.terminal-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-input-group label {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.75rem;
+    color: rgb(96, 197, 220); /* Lighter cyan */
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.terminal-input-group input,
+.terminal-input-group textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 195, 255, 0.2);
+    padding: 8px 0;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.95rem;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.terminal-input-group input::placeholder,
+.terminal-input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.terminal-input-group input:focus,
+.terminal-input-group textarea:focus {
+    border-bottom-color: rgb(50, 151, 173);
+}
+
+.transmit-btn {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    background-color: rgb(50, 151, 173);
+    color: #000000;
+    border: none;
+    padding: 12px 32px;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border-radius: 4px; /* Slightly sharp modern box */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.transmit-btn:hover {
+    background-color: rgb(0, 195, 255);
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.3);
 }
 
 
@@ -679,18 +747,34 @@ background: linear-gradient(311deg, rgba(1, 8, 8, 1) 0%, rgba(0, 7, 8, 1) 34%, r
     .projects p {
         font-size: clamp(0.95rem, 2.5vw, 1.375rem);
     }
+    
+    /* ---- Contact Section overrides ---- */
+    .contact {
+        padding: 40px 16px;
+    }
+    .contact-grid {
+        gap: 2.5rem;
+    }
+    .transmission-card {
+        padding: 1.5rem;
+    }
 }
 
 .footer {
-    background-color: rgba(5, 22, 26, 0.8);
-    padding: 20px 0;
+    background-color: #010a0f; /* Seamlessly matches the bottom of the contact linear-gradient */
+    padding: 30px 0;
     margin-top: auto;
-    color: #c4bfbf;
+    color: #8c8f94;
+    border-top: 1px solid rgba(0, 195, 255, 0.05); /* Faint edge */
 }
+
 .footer p {
     text-align: center;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 /* --- Variables & Base Scope --- */
@@ -1229,8 +1313,8 @@ background: linear-gradient(311deg, rgba(1, 8, 8, 1) 0%, rgba(0, 7, 8, 1) 34%, r
 .obsidian-pill {
   background: rgba(18, 18, 18, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   padding: 0.25rem 0.75rem;
   font-size: 0.625rem; /* 10px */
   font-family: var(--font-mono);
